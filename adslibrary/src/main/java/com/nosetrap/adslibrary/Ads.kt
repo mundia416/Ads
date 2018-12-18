@@ -2,12 +2,9 @@ package com.nosetrap.adslibrary
 
 import android.app.Activity
 import android.widget.FrameLayout
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.InterstitialAd
 import android.os.Bundle
 import com.google.ads.mediation.admob.AdMobAdapter
+import com.google.android.gms.ads.*
 
 
 /**
@@ -16,8 +13,8 @@ import com.google.ads.mediation.admob.AdMobAdapter
  * only use 1 banner ad for each instantiation of this class
  */
 class Ads(private val activity: Activity){
-    private var interstitialAd: InterstitialAd? = null
-    private var bannerAd: AdView? = null
+    var interstitialAd: InterstitialAd? = null
+    var bannerAd: AdView? = null
 
     private val adsManager = AdsManager(activity)
 
